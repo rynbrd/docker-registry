@@ -1,0 +1,16 @@
+common:
+  storage: local
+  storage_path: /var/lib/docker/registry
+  standalone: false
+  secret_key: _env:SECRET_KEY:supersecret
+  search_backend: sqlalchemy
+  sqlalchemy_index_database: sqlite:////var/lib/docker/registry/index.db
+
+dev:
+  loglevel: debug
+
+prod:
+  {}
+
+test:
+  loglevel: debug
