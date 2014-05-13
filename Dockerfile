@@ -3,7 +3,7 @@ FROM phusion/baseimage:0.9.9
 ENV HOME /root
 ENV SETTINGS_FLAVOR prod
 ENV DEBIAN_FRONTEND noninteractive
-EXPOSE 5000
+EXPOSE 80
 CMD ["/sbin/my_init"]
 
 # run commands in the container
