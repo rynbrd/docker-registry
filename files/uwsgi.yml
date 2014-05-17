@@ -1,0 +1,3 @@
+uwsgi:
+  pythonpath: /app
+  module: docker_registry.wsgi:application

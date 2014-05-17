@@ -1,3 +1,0 @@
-#!/bin/sh
-cd /opt/docker-registry
-exec gunicorn --access-logfile - --debug -k gevent -b 0.0.0.0:80 -w 1 docker_registry.wsgi:application

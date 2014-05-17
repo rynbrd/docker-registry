@@ -6,9 +6,10 @@ sqlalchemy with sqlite as the index backend.
 
 Building
 --------
-Nothing special, just do a normal docker build:
+As easy as clone and build:
 
-    docker build -t bluedragonx/docker-registry-local .
+    git clone https://github.com/BlueDragonX/docker-registry.git
+    docker build --rm -t bluedragonx/registry docker-registry
 
 Running
 -------
@@ -16,7 +17,7 @@ The Flask secret key should be set on the command line. All registry files,
 including the sqlite index, are stored in /var/lib/docker/registry. It is
 recommended that this location be a volume. Example: 
 
-    docker run -p 5000:5000 -e SECRET_KEY=supersecretkey -v /tmp/registry:/var/lib/docker/registry bluedragonx/docker-registry-local
+    docker run -P -e SECRET_KEY=supersecretkey -v /tmp/registry:/var/lib/docker/registry bluedragonx/registry
 
 License
 -------
