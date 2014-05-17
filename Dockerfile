@@ -17,7 +17,7 @@ RUN rm -rf /app && \
     rm -rf /app/.git /app/config/*
 
 # create directories and add files we need
-RUN mkdir -p /var/lib/docker/registry
+RUN mkdir -p /data && chown app:app /data
 ADD files/nginx.conf /app/
 ADD files/uwsgi.yml /app/
 ADD files/config.yml /app/config/
