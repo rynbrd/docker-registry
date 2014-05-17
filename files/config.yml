@@ -5,11 +5,5 @@ common:
   search_backend: sqlalchemy
   sqlalchemy_index_database: sqlite:////var/lib/docker/registry/index.db
 
-dev:
-  loglevel: debug
-
 prod:
   {}
-
-test:
-  loglevel: debug
